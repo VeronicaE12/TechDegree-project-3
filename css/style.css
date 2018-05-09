@@ -1,0 +1,151 @@
+/* =================================
+  Base Element Styles
+==================================== */
+* {
+	box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  background: #093a58;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 40px;
+  margin: 0;
+}
+.signUp>h2 {
+  font-size: 1.7em;
+  margin-bottom: 10px;
+}
+form>h2 {
+  font-size: 1.7em;
+  margin-bottom: 30px;
+}
+p {
+  font-size: 1.3em;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 45px;
+}
+
+/* =================================
+  Base Layout Styles
+==================================== */
+.signUp {
+  text-align: center;
+  margin: 10px 20px 5px 20px;
+  border-bottom: solid 4px black;
+}
+
+.main,
+.newsletter {
+  border-top: solid 2px black;
+  margin: 0 20px;
+}
+
+button {
+  align-self: flex-start;
+  background: #52bab3;
+  color: white;
+  font-size: 1.6em;
+  padding: 25px 33%;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+footer {
+  text-align: center;
+  color: lightgrey;
+  font-size: 1.3em;
+  font-style: italic;
+  padding-bottom: 60px;
+}
+
+.radio,
+.checkbox {
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+/* ---- Page Elements ---- */
+
+label {
+  font-size: 1.4em;
+  color: #6d6d6d;
+}
+
+input,
+select {
+  background: #eaeaea;
+  border-radius: 5px;
+  border-style: none;
+  margin: 15px 0;
+  font-size: 1.5em;
+  outline-color: #093a58;
+  width: 100%;
+  padding: 20px;
+}
+select {
+  color: rgb(176, 176, 176);
+  -webkit-logical-height: 60px;
+  -webkit-logical-width: 96%;
+  -webkit-border-after: 5px;
+}
+
+option {
+  padding: 20px 30%;
+  margin: 15px 0;
+  color: lightgrey;
+}
+#zip {
+  padding: 20px;
+  max-width: 60%;
+  margin-bottom: 40px;
+}
+.light {
+  padding: 15px;
+  line-height: 1;
+  margin-left: 5px;
+}
+textarea {
+  background: #eaeaea;
+  padding: 50px 30%;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border-style: none;
+  margin-top: 20px;
+}
+
+label[for="comment"],
+label[for="newsletter"],
+label[for="newsletter2"] {
+  line-height: 35px;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 20px;
+  width:20px;
+}
+::-webkit-input-placeholder {
+  color: rgb(176, 176, 176);
+  font-style: italic;
+  text-align: right;
+  font-weight: lighter;
+  font-size: .7em;
+}
+/* =================================
+  Media Queries
+==================================== */
+
+/* @media (min-width: 769px) {
+
+
+} */
