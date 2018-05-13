@@ -6,11 +6,10 @@
 }
 
 body {
-  /* display: flex;
-  flex-direction: column; */
   min-height: 100vh;
   margin: 0;
   padding: 0;
+  font-family: 'Merriweather', serif;
 }
 
 h1 {
@@ -23,20 +22,26 @@ h1 {
   margin: 0;
 }
 .signUp>h2 {
-  font-size: 1.7em;
+  font-size: 1.5em;
   margin-bottom: 10px;
 }
-form>h2 {
-  font-size: 1.7em;
-  margin-bottom: 30px;
-}
 p {
-  font-size: 1.3em;
+  font-size: 1.1em;
   text-align: center;
   margin-top: 0;
   margin-bottom: 45px;
+  color: rgb(176, 176, 176);
 }
-
+input:invalid {
+  border: 2px dashed red;
+}
+input:valid {
+  border: 2px solid green;
+}
+footer {
+  background: darkgrey;
+  padding: 20px 0 70px 0;
+}
 /* =================================
   Base Layout Styles
 ==================================== */
@@ -46,7 +51,7 @@ p {
   border-bottom: solid 4px black;
 }
 
-.main,
+.contact-information,
 .newsletter {
   border-top: solid 2px black;
   margin: 0 20px;
@@ -61,6 +66,7 @@ button {
   border-radius: 5px;
   margin: 0 auto;
   margin-bottom: 40px;
+  width: 100%;
 }
 footer {
   text-align: center;
@@ -92,6 +98,10 @@ select {
   outline-color: #093a58;
   width: 100%;
   padding: 20px;
+  transition: all 1s ease-out;
+}
+input:focus{
+  background: aliceblue;
 }
 select {
   color: rgb(176, 176, 176);
@@ -117,6 +127,7 @@ option {
 }
 textarea {
   background: #eaeaea;
+  outline-color: #093a58;
   padding: 50px 30%;
   margin-bottom: 20px;
   border-radius: 5px;
@@ -141,11 +152,14 @@ input[type="radio"] {
   font-weight: lighter;
   font-size: .7em;
 }
+.flex-outer {
+  list-style-type: none;
+  padding: 0;
+}
 /* =================================
   Media Queries
 ==================================== */
-
-@media (min-width: 769px) {
+@media (min-width:769px) {
 
   h1 {
     max-width: 100%;
@@ -153,30 +167,36 @@ input[type="radio"] {
     font-size: 1.2em;
     margin-bottom: 25px;
   }
-  p {
+  .signUp>h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+   p {
     color: rgb(176, 176, 176);
-    font-size: 1.1em;
+    font-size: .9em;
     font-weight: lighter;
   }
+  input, #state {
+    padding: 10px;
+  }
+  .container #zip {
+  padding:  10px;
+  max-width: 30%;
+  }
   .signUp,
-  .main,
+  .contact-information,
   .newsletter {
-    max-width: 70%;
+    max-width: 80%;
     margin:0 auto;
     padding-top: 20px;
   }
-  .main {
-    margin-top: 5px;
-  }
+
   form>h2 {
     font-size: 1.4em;
     padding-top: 20px;
   }
   label {
     font-size: 1.1em;
-  }
-  input {
-    width: 20%;
   }
   button {
     padding: 15px 43%;
@@ -191,14 +211,48 @@ input[type="radio"] {
     font-size: 1.1em;
   }
   /* ---- flex Elements ---- */
-  .container {
+
+  .contact-information {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+  flex-outer {
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .flex-outer > li > label,
+  .flex-outer li p {
+    flex: 1;
+    font-size: 1em;
+  }
+  select {
+    font-size: 1em;
+  }
+  .zip>label {
     display: flex;
     flex-wrap: wrap;
   }
-  label {
-    flex-grow: 1;
+  #zip {
+    align-self: flex-start;
+    margin-right: 250px;
   }
-  input {
-    flex-grow: 3;
+  .flex-outer > li > label + * {
+    flex: 2.5;
+  }
+  .flex-outer li p {
+    margin: 0;
   }
 }
