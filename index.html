@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
   <head>
+    <meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   	<title>Online Registration Form</title>
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
   	<link rel="stylesheet" href="css/style.css">
   </head>
-
+  <body>
       <header>
-      <h1>The Code Review</h1>
-    </header>
-    <body>
+        <h1>The Code Review</h1>
+      </header>
+
         <div class="signUp">
           <h2>Sign up for our newsletter</h2>
           <p>Get the latest news on how your code is doing right in your inbox</p>
@@ -35,11 +36,11 @@
                     </li>
                     <li>
                       <label for="address">Street Address</label>
-                      <input type="street-address" id="address" name="user_address">
+                      <input type="text" id="address" name="user_address">
                     </li>
                     <li>
                       <label for="city">City</label>
-                      <input type="street-address" id="city" name="user_city">
+                      <input type="text" id="city" name="user_city">
                     </li>
                     <li>
                       <label for="state">State</label>
@@ -100,28 +101,30 @@
                     </li>
                     <li class="zip">
                       <label for="zip">Zip Code</label>
-                      <input type="postal-code" id="zip" name="user_zip"placeholder="00000">
+                      <input type="number" id="zip" name="user_zip" placeholder="00000">
                     </li>
+                  </ul>
+                </form>
               </div>
             </div>
             <div class="newsletter">
               <h2>Newsletter</h2>
-                <label for="newsletter">Select the newsletters you would like to  receive:</label></br>
-                  <section class="checkbox">
-                    <input type="checkbox" value="HTML_news" name="newsletter"><label for="html" class="light">HTML News</label></br>
-                    <input type="checkbox" value="css_news" name="newsletter"><label for="css" class="light">CSS News</label></br>
-                    <input type="checkbox" value="javascript_news" name="newsletter"><label for="javascript" class="light">Javascript News</label></br>
+              <section class="checkbox">
+                <label>Select the newsletters you would like to  receive:</label><br>
+                    <input type="checkbox" name="newsletter"><label id="checkbox" class="light">HTML News</label><br>
+                    <input type="checkbox" name="newsletter"><label id="css" class="light">CSS News</label><br>
+                    <input type="checkbox" name="newsletter"><label id="js" class="light">Javascript News</label><br>
                   </section>
 
-                <label>Newsletter format:</label></br>
+                <label>Newsletter format:</label>
                   <section class="radio">
-                    <input type="radio" value="html" name="newsletter"><label for="html" class="light">HTML</label></br>
-                    <input type="radio" value="plain_text" name="newsletter"><label for="plaintext" class="light">Plain text</label></br>
+                    <input type="radio" id="textform" name="newsletter">
+                    <label for="textform" class="light">HTML</label><br>
+                    <input type="radio" id="plain_text" name="newsletter">
+                    <label for="plain_text" class="light">Plain text</label><br>
                   </section>
-                <label for="comment">Other topics you'd like to hear about</label></br>
-                  <textarea id="inputTopics" name="inputToipcs"></textarea></br>
-            </form>
-
+                <label for="inputTopics">Other topics you'd like to hear about</label>
+                  <textarea id="inputTopics" name="inputToipcs"></textarea>
 
             <button type="submit">Sign Up</button>
           </div>

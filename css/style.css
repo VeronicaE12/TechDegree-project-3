@@ -133,6 +133,7 @@ textarea {
   border-radius: 5px;
   border-style: none;
   margin-top: 20px;
+  width: 100%;
 }
 
 label[for="comment"],
