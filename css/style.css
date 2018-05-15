@@ -29,7 +29,16 @@ legend {
 legend {
   font-size: 1.5em;
   margin-bottom: 20px;
-  padding-top: 25px;
+  display: block;
+  border-top: solid 2px #093a58;
+  width: 100%;
+}
+
+fieldset {
+  border: 0;
+  padding: 0 20px;
+  margin: 0;
+  min-width: 0;
 }
 p {
   font-size: .9em;
@@ -57,12 +66,6 @@ footer {
   text-align: center;
   margin: 10px 20px 5px 20px;
   border-bottom: solid 4px #093a58;
-}
-
-.contact-information,
-.newsletter {
-  border-top: solid 2px #093a58;
-  margin: 0 20px;
 }
 
 button {
@@ -124,6 +127,7 @@ option {
   margin: 15px 0;
   color: lightgrey;
 }
+
 #zipcode {
   padding: 20px;
   max-width: 45%;
@@ -210,10 +214,15 @@ input[type="radio"] {
     margin:0 auto;
     padding-top: 20px;
   }
-
+  fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+  }
   legend {
     font-size: 1.4em;
-    padding-top: 20px;
+    padding-top: 35px;
   }
   label {
     font-size: 1.1em;
@@ -264,7 +273,7 @@ input[type="radio"] {
   }
   .zip {
     display: flex;
-    justify: space-between;
+    padding-bottom: 20px;
   }
   #zipcode {
     max-width: 40%;

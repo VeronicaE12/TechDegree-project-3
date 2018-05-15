@@ -16,8 +16,7 @@
             <h2>Sign up for our newsletter</h2>
             <p>Get the latest news on how your code is doing right in your inbox</p>
           </div>
-
-          <div class="contact-information">
+          <fieldset class="contact-information">
               <legend>Contact Information</legend>
                 <div class="container">
                     <ul class="flex-outer">
@@ -103,33 +102,33 @@
                         <input type="text" id="zipcode" name="user_zip" placeholder="Optional">
                       </li>
                     </ul>
+              
+                </div>
+              </fieldset>
+              <fieldset class= "newsletter">
+                <legend>Newsletter</legend>
+                <section class="checkbox">
+                  <label>Select the newsletters you would like to receive:</label><br>
+                      <input type="checkbox" id="checkbox" name="newsletter">
+                      <label  for="checkbox" class="light">HTML News</label><br>
+                      <input type="checkbox" id="css" name="newsletter">
+                      <label  for="css" class="light">CSS News</label><br>
+                      <input type="checkbox" id="js" name="newsletter">
+                      <label for="js" class="light">Javascript News</label><br>
+                    </section>
 
-              </div>
-            </div>
-            <div class="newsletter">
-              <legend>Newsletter</legend>
-              <section class="checkbox">
-                <label>Select the newsletters you would like to receive:</label><br>
-                    <input type="checkbox" id="checkbox"name="newsletter">
-                    <label  for="checkbox"class="light">HTML News</label><br>
-                    <input type="checkbox" id="css" name="newsletter">
-                    <label  for="css" class="light">CSS News</label><br>
-                    <input type="checkbox" id="js" name="newsletter">
-                    <label for="js" class="light" for=>Javascript News</label><br>
-                  </section>
+                  <label>Newsletter format:</label>
+                    <section class="radio">
+                      <input type="radio" id="textform" name="newsletter">
+                      <label for="textform" class="light">HTML</label><br>
+                      <input type="radio" id="plain_text" name="newsletter">
+                      <label for="plain_text" class="light">Plain text</label><br>
+                    </section>
+                  <label for="inputTopics">Other topics you'd like to hear about</label>
+                    <textarea id="inputTopics" name="inputToipcs"></textarea>
+              <button type="submit">Sign Up</button>
 
-                <label>Newsletter format:</label>
-                  <section class="radio">
-                    <input type="radio" id="textform" name="newsletter">
-                    <label for="textform" class="light">HTML</label><br>
-                    <input type="radio" id="plain_text" name="newsletter">
-                    <label for="plain_text" class="light">Plain text</label><br>
-                  </section>
-                <label for="inputTopics">Other topics you'd like to hear about</label>
-                  <textarea id="inputTopics" name="inputToipcs"></textarea>
-
-            <button type="submit">Sign Up</button>
-          </div>
+          </fieldset>
         </form>
         <footer> Copyright The Code Review </footer>
   </body>
